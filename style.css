@@ -20,10 +20,6 @@ img {
   width: 100%;
 }
 
-.wrapper {
-	margin: auto;	
-}
-
 hr{
   height: 3px;
   margin-top: 30px;
@@ -33,22 +29,16 @@ hr{
 /*Content*/
 
 h1 {
-  text-align: center;
+  text-align: left;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 38px;
-  color: #EDF2FB
+  color: #EDF2FB;
+  align-items: flex-start;
 }
 
 h2 {
-  text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 31px;
-  color: #EDF2FB
-}
-
-h3 {
   font-size: 25px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 p{
@@ -82,10 +72,26 @@ p{
 @media all and (min-width: 800px) {
   .group {
     flex-direction: row;
-  .wrapper {
-    width: 80%;
-    margin: auto;
   }  
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  header h1 {
+    margin: 14 px 0;
+    padding-top: 0;
+  }
+
+  header nav {
+    margin-top: 20px;
+  }
+
+  header nav ul li a:hover {
+    color: lightskyblue;
+  }
 }
 
 /*--Lists--*/
@@ -105,5 +111,51 @@ a:active {color: maroon}
 /*--Map--*/
 
 iframe {
-  border: 1px solid black
+  border: 1px solid black;
+}
+
+/* Navigation */
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  margin: 0 20px 0 0;
+  color: #fff;
+}
+
+header nav ul li:last-child {
+  margin-right: 0;
+}
+
+/* Contact Form*/
+
+form label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: grey;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form input[type-text] {
+  font-size: 16px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+} 
+
+form textarea{
+  height: 150px;
 }
